@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Movie Recommendation App</title>
+    <style>
+      /* CSS styling for the movie recommendation app */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      header {
+        background-color: #055c26;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+      }
+      
+      label {
+        font-size: 18px;
+        margin-right: 10px;
+      }
+      
+      input[type="text"],
+      input[type="number"] {
+        padding: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      li {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Movie Recommendation App</h1>
+    </header>
+    <main>
+
+        <label for="genre-input">Genre:</label>
+        <input type="text" id="genre-input">
+        <br>
+
+        <label for="rating-input">Minimum Rating:</label>
+        <input type="number" id="rating-input" min="1" max="10" step="1" value="5">
+        <br>
+
+        <label for="release-year-input">Minimum Release Year:</label>
+        <input type="number" id="release-year-input" min="1900" max="2023" step="1" value="2000">
+        <br>
+
+      <button id="recommend-button" onclick="displayRecommendations()">Get Recommendations</button>
+      <ul id="movie-list"></ul>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
